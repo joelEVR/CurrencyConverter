@@ -1,5 +1,6 @@
-
+My name is Samuel Olotu
 TODOs:
+
 
 In groups of 4, complete the following tasks, 1 for each team member:
 1. Extract all the strings into the **strings.xml** file and use them in the layout and the activity
