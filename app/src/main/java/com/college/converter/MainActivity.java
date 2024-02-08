@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.college.converter.databinding.ActivityMainBinding;
+
 
 import android.util.Log;
 
@@ -26,7 +28,9 @@ import android.util.Log;
 */
 
 public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
     static private final Float CONVERSION_RATE = 0.80F;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         } );
 
         Log.i("MainActivity", "onCreate completed"); // Log message at the exit of onCreate
+        });
     }
 
     public void convertCurrency(View view) {
@@ -53,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         String inputAmount = inputView.getText().toString();
 
         TextView resultView = findViewById(R.id.resultId);
+        String inputAmount = binding.entryId.getText().toString();
+        TextView resultView = binding.resultId;
 
         if (!inputAmount.isEmpty()) {
             Float inputAmountDecimal = Float.valueOf(inputAmount);
