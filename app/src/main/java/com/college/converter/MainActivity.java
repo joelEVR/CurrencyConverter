@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import android.util.Log;
+
+
 /*
     TODOs:
     In groups of 4, complete the following tasks, 1 for each team member:
@@ -26,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     static private final Float CONVERSION_RATE = 0.80F;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Log.i("MainActivity", "onCreate started"); // Log message at the entry of onCreate
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -34,9 +40,13 @@ public class MainActivity extends AppCompatActivity {
         buttonConvert.setOnClickListener( view ->  {
             convertCurrency(view);
         } );
+
+        Log.i("MainActivity", "onCreate completed"); // Log message at the exit of onCreate
     }
 
     public void convertCurrency(View view) {
+
+        Log.i("MainActivity", "convertCurrency started"); // Log message at the entry of convertCurrency
 
         EditText inputView = findViewById(R.id.entryId);
 
@@ -51,5 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
             resultView.setText( resultFloat + " Euros" );
         }
+        Log.i("MainActivity", "convertCurrency completed"); // Log message at the exit of convertCurrency
     }
 }
