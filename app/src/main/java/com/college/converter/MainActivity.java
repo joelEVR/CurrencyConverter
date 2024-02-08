@@ -37,27 +37,20 @@ public class MainActivity extends AppCompatActivity {
         Log.i("MainActivity", "onCreate started"); // Log message at the entry of onCreate
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        Button buttonConvert = findViewById(R.id.convertButton);
-
-        buttonConvert.setOnClickListener( view ->  {
+        binding.convertButton.setOnClickListener(view -> {
             convertCurrency(view);
-        } );
+        });
 
         Log.i("MainActivity", "onCreate completed"); // Log message at the exit of onCreate
-        });
     }
 
     public void convertCurrency(View view) {
 
         Log.i("MainActivity", "convertCurrency started"); // Log message at the entry of convertCurrency
 
-        EditText inputView = findViewById(R.id.entryId);
-
-        String inputAmount = inputView.getText().toString();
-
-        TextView resultView = findViewById(R.id.resultId);
         String inputAmount = binding.entryId.getText().toString();
         TextView resultView = binding.resultId;
 
