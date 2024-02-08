@@ -1,10 +1,3 @@
-
-Devon Byleveld
-Samuel Olotu
-Ting Cheng
-Joel Velasquez 
-
-
 TODOs:
 
 
@@ -18,4 +11,9 @@ In groups of 4, complete the following tasks, 1 for each team member:
     after completion using a Pull Request.
     - Each task must be done by a different team member.
 
-Devon Byleveld
+Team Members:
+
+Ting Cheng Task 1
+Samuel Olotu Task 2
+Joel Velasquez Task 3
+Devon Byleveld Task 4
